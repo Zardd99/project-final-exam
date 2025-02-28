@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import "tailwindcss";
+@layer theme, base, utilities;
+
+@layer utilities {
+  .grid-cols-auto-fit-minmax {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-light dark:bg-dark  text-dark dark:text-light transition-colors duration-300 ease-in;
+  }
+
+  .dark body {
+    --color-light: #020617;
+    --color-dark: #f1f5f9;
+    --color-slate-700: oklch(0.869 0.022 252.894);
+    @apply bg-dark text-light;
+  }
+
+  button,
+  input {
+    @apply font-display text-base tracking-tighter leading-[0.9];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-semibold leading-[0.9] tracking-tighter;
+  }
+
+  p {
+    @apply tracking-tighter;
+  }
+
+  img {
+    @apply block max-w-full select-none;
+  }
+
+  button {
+    @apply inline-block outline-none p-0 border-0 bg-none cursor-pointer  text-inherit;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  a {
+    @apply transition-colors duration-500 ease-in text-dark no-underline;
+  }
+
+  .dark a {
+    @apply text-light;
+  }
+
+  hr {
+    @apply transition-all duration-500 ease-in border border-dark dark:border-light;
+  }
+}
+
+@theme {
+  --color-light: #f1f5f9;
+  --color-dark: #020617;
+  --color-button: #4acfee;
+  --shadow-button: 0 0 10px #4acfee;
+  --shadow-light: 0 0 10px #f1f5f9;
+  --color-gradient: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  --color-navbar: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+
+  --font-display: "Poppins", "sans-serif";
+}
