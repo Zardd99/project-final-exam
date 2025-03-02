@@ -10,6 +10,7 @@ import { lazy, Suspense } from "react";
 import ErrorBoundary from "./ErrorBoundary";
 
 const Project = lazy(() => import("./pages/Project"));
+const Contact = lazy(() => import("./pages/Contact"));
 const Favorites = lazy(() => import("./pages/Movie/Favorites"));
 const History = lazy(() => import("./pages/Movie/History"));
 
@@ -31,6 +32,14 @@ const App = () => {
             element={
               <Suspense>
                 <Project />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense>
+                <Contact />
               </Suspense>
             }
           />

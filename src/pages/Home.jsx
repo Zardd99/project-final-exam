@@ -1,6 +1,10 @@
 import React from "react";
 
+import img from "../assets/MyProfile.png";
+
 import { Link } from "react-router-dom";
+import Featured from "../components/Featured";
+import Footer from "../components/Footer";
 
 const HERO_DATA = [
   {
@@ -20,20 +24,27 @@ const Home = () => {
     <div className="w-full flex flex-col items-center justify-center">
       <section
         className={`home container px-0 py-4 sm:py-8 sm:px-0 w-full box-border mt-20 flex flex-col items-center justify-center
-       gap-7 h-[calc(100vh-72px)] `}
+       gap-7`}
         key={id}
       >
-        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold ">
+        <div className="flex relative justify-center items-center w-78 h-78 rounded-[50%] overflow-hidden shadow-light ">
+          <div className="flex relative justify-center items-center w-75 h-75 rounded-[50%] overflow-hidden shadow-button">
+            <img
+              className="object-cover w-75 h-75 rounded-[50%]"
+              src={img}
+              alt="Image"
+            />
+          </div>
+        </div>
+        <h2 className="text-lg lg:text-xl xl:text-2xl font-bold ">
           {subtitle}
         </h2>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-indigo-500 ">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-indigo-500 ">
           {title}
         </h1>
-        <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
-          {description}
-        </p>
-        <div className=" flex gap-4 items-center justify-center mt-10">
-          <div className=" flex gap-4 items-center justify-center">
+        <p className="text-base lg:text-lg xl:text-xl">{description}</p>
+        <div className=" flex flex-col md:flex-row gap-4 items-end justify-center md:items-center mt-10">
+          <div className=" flex  gap-4 items-center justify-center">
             <div className="flex gap-4 items-center justify-center group">
               <p className=" text-xs sm:text-sm md:text-base lg:text-lg">
                 Click Here to See my Movie Site Project
@@ -93,6 +104,16 @@ const Home = () => {
               </Link>
             </button>
           </div>
+        </div>
+
+        <div className="p-10 w-full"></div>
+        <div className="h-fit w-full">
+          <Featured />
+        </div>
+
+        <div className="p-10"></div>
+        <div>
+          <Footer />
         </div>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import "./Project.css";
 import { useEffect, useRef } from "react";
+import Footer from "../components/Footer";
 import SamsungClone from "../assets/Project7.png";
 import Todo from "../assets/Todo.png";
 import MovieSite from "../assets/Movie-site.png";
@@ -117,6 +118,11 @@ const Project = () => {
             </div>
           ))}
         </div>
+        <div className="p-10"></div>
+        <div className="w-full flex items-center justify-center ">
+          <Footer />
+        </div>
+        <div className="p-10"></div>
       </section>
     </div>
   );

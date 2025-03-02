@@ -11,6 +11,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   body {
@@ -41,7 +46,8 @@
     @apply tracking-tighter;
   }
 
-  img {
+  img,
+  svg {
     @apply block max-w-full select-none;
   }
 

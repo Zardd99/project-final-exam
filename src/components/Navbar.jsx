@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="navbar bg-dark duration-300 ease-in w-full p-4 md:px-8 md:py-4 flex justify-between items-center fixed top-0 left-0 z-[999]">
+      <nav className="navbar bg-dark duration-300 ease-in w-full p-4 md:px-8 md:py-4 flex justify-between items-center fixed top-0 left-0 z-[9999]">
         <div className="navbar-brand text-xl md:text-2xl font-bold">
           <Link to="/" className="text-dark dark:text-light">
             Portfolio
