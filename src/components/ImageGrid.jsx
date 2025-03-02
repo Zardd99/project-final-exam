@@ -5,7 +5,7 @@ import project1 from "../assets/Project7.png";
 import MovieSite from "../assets/Movie-site.png";
 import Todo from "../assets/Todo.png";
 
-const images = [project1, MovieSite, Todo];
+const images = [project1, Todo, MovieSite];
 const links = [
   {
     link: "",
