@@ -53,13 +53,13 @@ const Navbar = () => {
   return (
     <div className="relative">
       <nav className="navbar bg-dark duration-300 ease-in w-full p-4 md:px-8 md:py-4 flex justify-between items-center fixed top-0 left-0 z-[9999]">
-        <div className="navbar-brand text-xl md:text-2xl font-bold">
+        <div className=" text-xl md:text-2xl font-bold">
           <Link to="/" className="text-dark dark:text-light">
             Portfolio
           </Link>
         </div>
 
-        <div className="navbar w-fit h-fit hidden sm:flex">
+        <div className="navbar w-fit h-fit hidden md:flex">
           <div className="navbar-links flex gap-4 md:gap-8 items-center justify-center font-semibold">
             {NAVBAR_DATA.map((data) => (
               <Link
@@ -91,7 +91,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="flex sm:hidden text-dark dark:text-light"
+          className="flex md:hidden text-dark dark:text-light"
           onClick={toggleNavbar}
         >
           <svg
@@ -115,7 +115,7 @@ const Navbar = () => {
             isNavbarOpen
               ? "translate-x-0 overflow-y-hidden"
               : "-translate-x-full"
-          } fixed inset-0 bg-dark z-50 transition-transform duration-300 ease-in-out sm:hidden `}
+          } fixed inset-0 bg-dark z-50 transition-transform duration-300 ease-in-out md:hidden `}
         >
           <div className="p-4 flex flex-col h-full ">
             <button className="mb-4 text-light" onClick={toggleNavbar}>
@@ -175,7 +175,7 @@ const Navbar = () => {
 
         {isNavbarOpen && (
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm sm:hidden "
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden "
             onClick={toggleNavbar}
           />
         )}
