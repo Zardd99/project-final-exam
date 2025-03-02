@@ -23,8 +23,8 @@ const Home = () => {
       <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 items-center">
           <div className="relative group mx-auto lg:mx-0 flex items-center justify-center">
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-blue-300 blur-3xl opacity-40 animate-pulse-slow" />
-            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-blue-300 blur-3xl opacity-40 animate-border-flow" />
+            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl animate-border-glow">
               <img
                 src={img}
                 alt="Profile"
@@ -50,7 +50,7 @@ const Home = () => {
             <div className="flex flex-col gap-6 sm:flex-row">
               <Link
                 to="/main"
-                className="flex items-center gap-2 rounded-lg bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="flex items-center gap-2 rounded-lg  bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 {button_project}
                 <svg
