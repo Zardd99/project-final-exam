@@ -39,7 +39,7 @@ const Home = () => {
         <h2 className="text-lg lg:text-xl xl:text-2xl font-bold ">
           {subtitle}
         </h2>
-        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-semibold text-indigo-500 ">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl !font-black text-indigo-500 uppercase text-center">
           {title}
         </h1>
         <p className="text-base lg:text-lg xl:text-xl">{description}</p>

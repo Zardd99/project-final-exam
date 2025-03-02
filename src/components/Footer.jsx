@@ -5,7 +5,9 @@ const Footer = () => {
         <footer className="max-w-6xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
-              <p className="text-sm">© 2023 Sakda Chin. All rights reserved.</p>
+              <p className="text-sm">
+                © {new Date().getFullYear()} Sakda Chin. All rights reserved.
+              </p>
               <p className="text-xs mt-1 text-gray-400">
                 Built with ❤️ using ReactJS, TailwindCSS, Vite
               </p>
