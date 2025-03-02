@@ -1,7 +1,5 @@
 import React from "react";
-
 import img from "../assets/MyProfile.png";
-
 import { Link } from "react-router-dom";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
@@ -10,103 +8,80 @@ import CVDownload from "../components/CVDownload";
 const HERO_DATA = [
   {
     id: 1,
-    subtitle: "Project ShowCase",
-    title: "Welcome to the home page!",
-    description: "I'm Sakda .. A web developer || responsive design",
-    button_project: "Go To My Projects",
+    subtitle: "Project Showcase",
+    title: "Full-Stack Developer",
+    description: "Sakda Chin - Crafting responsive web experiences",
+    button_project: "View Projects",
   },
 ];
 
 const Home = () => {
-  const { id, subtitle, title, description, button_project } = HERO_DATA[0];
-  return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <section
-        className={`home container px-0 py-4 sm:py-8 sm:px-0 w-full box-border mt-20 flex flex-col items-center justify-center
-       gap-7`}
-        key={id}
-      >
-        <div className="flex relative justify-center items-center w-78 h-78 rounded-[50%] overflow-hidden shadow-light ">
-          <div className="flex relative justify-center items-center w-75 h-75 rounded-[50%] overflow-hidden shadow-button">
-            <img
-              className="object-cover w-75 h-75 rounded-[50%]"
-              src={img}
-              alt="Image"
-            />
-          </div>
-        </div>
-        <h2 className="text-lg lg:text-xl xl:text-2xl font-bold ">
-          {subtitle}
-        </h2>
-        <h1 className="text-4xl lg:text-5xl xl:text-6xl !font-black text-indigo-500 uppercase text-center">
-          {title}
-        </h1>
-        <p className="text-base lg:text-lg xl:text-xl">{description}</p>
-        <div className=" flex flex-col md:flex-row gap-4 items-end justify-center md:items-center mt-10">
-          <div className=" flex  gap-4 items-center justify-center">
-            <div className="flex gap-4 items-center justify-center group">
-              <p className=" text-xs sm:text-sm md:text-base lg:text-lg">
-                Click Here to See my Movie Site Project
-              </p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5 group-hover:transform-[translateX(5px)] duration-300 ease-in"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </div>
+  const { subtitle, title, description, button_project } = HERO_DATA[0];
 
-            <button className="group inline-block py-[10px] px-[10px] md:py-[15px] md:px-[30px] bg-button border-[2px] border-button border-solid shadow-button text-xs sm:text-sm md:text-base  font-black text-dark pointer mr-[15px] transition-[0.3s] text-nowrap hover:bg-transparent hover:shadow-none hover:text-button">
+  return (
+    <div className="min-h-screen  mt-[72px]">
+      <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 items-center">
+          <div className="relative group mx-auto lg:mx-0 flex items-center justify-center">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-indigo-300 via-purple-300 to-blue-300 blur-3xl opacity-40 animate-pulse-slow" />
+            <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-xl">
+              <img
+                src={img}
+                alt="Profile"
+                className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left mt-8 lg:mt-0">
+            <p className="mb-4 text-lg font-semibold text-indigo-400 md:text-xl">
+              {subtitle}
+            </p>
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+              <span className="bg-gradient-to-r from-indigo-800 via-indigo-500 to-blue-300 bg-clip-text text-transparent">
+                {title}
+              </span>
+            </h1>
+            <p className="mb-8 max-w-2xl text-lg text-gray-300 md:text-xl">
+              {description}
+            </p>
+
+            <div className="flex flex-col gap-6 sm:flex-row">
               <Link
                 to="/main"
-                className="!text-dark group-hover:!text-light transition-none"
+                className="flex items-center gap-2 rounded-lg bg-indigo-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/30 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 {button_project}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
               </Link>
-            </button>
-          </div>
-          <div className="flex gap-4 items-center justify-center">
-            <div className="flex gap-4 items-center justify-center group">
-              <p text-xs sm:text-sm md:text-base lg:text-lg>
-                Click here to contact me
-              </p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5 group-hover:transform-[translateX(5px)] duration-300 ease-in"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                />
-              </svg>
+              <CVDownload
+                className="rounded-lg border-2 border-indigo-500 px-8 py-4 font-semibold text-indigo-500 
+                            transition-all duration-300 hover:bg-indigo-500/10 hover:shadow-lg hover:shadow-indigo-500/20 
+                            focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              />
             </div>
-
-            <CVDownload />
           </div>
         </div>
 
-        <div className="p-10 w-full"></div>
-        <div className="h-fit w-full">
+        <div className="my-20">
           <Featured />
         </div>
 
-        <div className="p-10"></div>
-        <div>
-          <Footer />
-        </div>
+        <Footer className="mt-20 border-t border-slate-700/50" />
       </section>
     </div>
   );

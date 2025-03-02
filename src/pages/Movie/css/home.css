@@ -1,0 +1,34 @@
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.25;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.4;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.25;
+  }
+}
+
+@keyframes border-glow {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.02);
+  }
+}
+
+.animate-border-flow {
+  animation: border-flow 8s linear infinite;
+}
+
+.animate-border-glow {
+  animation: border-glow 6s ease-in-out infinite;
+}

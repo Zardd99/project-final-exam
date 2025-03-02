@@ -71,8 +71,8 @@ const Project = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <section className="project container mt-20" id="project">
-        <div className="flex items-center justify-center sticky  z-[999] top-15 bg-red-800 h-15 w-full">
+      <section className="relative project container mt-20" id="project">
+        <div className="flex items-center justify-center z-[999] bg-red-800 h-15 w-full sticky top-[72px]">
           <h1 className="text-light dark:text-dark">
             These are some of my projects hosting on{" "}
             <a
