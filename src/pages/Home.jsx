@@ -5,6 +5,7 @@ import img from "../assets/MyProfile.png";
 import { Link } from "react-router-dom";
 import Featured from "../components/Featured";
 import Footer from "../components/Footer";
+import CVDownload from "../components/CVDownload";
 
 const HERO_DATA = [
   {
@@ -13,13 +14,11 @@ const HERO_DATA = [
     title: "Welcome to the home page!",
     description: "I'm Sakda .. A web developer || responsive design",
     button_project: "Go To My Projects",
-    button_contact: "Go Contact Me",
   },
 ];
 
 const Home = () => {
-  const { id, subtitle, title, description, button_project, button_contact } =
-    HERO_DATA[0];
+  const { id, subtitle, title, description, button_project } = HERO_DATA[0];
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <section
@@ -95,14 +94,7 @@ const Home = () => {
               </svg>
             </div>
 
-            <button className="group inline-block py-[10px] px-[18px] sm:py-[12.5px] sm:px-[22.5px] md:py-[15px] md:px-[30px] bg-light border-[2px] border-light border-solid shadow-light text-xs sm:text-sm md:text-base font-black  pointer mr-[15px] transition-[0.3s] text-nowrap hover:bg-transparent hover:shadow-none ">
-              <Link
-                to="/contact"
-                className=" !text-dark group-hover:!text-light transition-none"
-              >
-                {button_contact}
-              </Link>
-            </button>
+            <CVDownload />
           </div>
         </div>
 
